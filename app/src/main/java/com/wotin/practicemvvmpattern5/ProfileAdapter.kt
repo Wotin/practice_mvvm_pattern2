@@ -3,6 +3,7 @@ package com.wotin.practicemvvmpattern5
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.wotin.practicemvvmpattern5.model.ProfileData
 import com.wotin.practicemvvmpattern5.databinding.RcvListItemBinding
@@ -18,7 +19,11 @@ class ProfileAdapter(private val context: Context) : RecyclerView.Adapter<Profil
         val binding = RcvListItemBinding.inflate(
             LayoutInflater.from(context), parent, false
         )
-        return CustomViewHolder(binding)
+        return CustomViewHolder(binding).apply { 
+            itemView.setOnClickListener {
+                Toast.makeText(context.applicationContext, "$adapterPosition Clicked! ", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     override fun getItemCount() = profileList.size
