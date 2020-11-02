@@ -1,4 +1,4 @@
-package com.wotin.practicemvvmpattern5.Model
+package com.wotin.practicemvvmpattern5.model
 
 data class ProfileData(
     var name : String,

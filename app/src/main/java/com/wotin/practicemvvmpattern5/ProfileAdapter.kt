@@ -1,11 +1,10 @@
 package com.wotin.practicemvvmpattern5
 
 import android.content.Context
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.wotin.practicemvvmpattern5.Model.ProfileData
+import com.wotin.practicemvvmpattern5.model.ProfileData
 import com.wotin.practicemvvmpattern5.databinding.RcvListItemBinding
 
 class ProfileAdapter(private val context: Context) : RecyclerView.Adapter<ProfileAdapter.CustomViewHolder>() {

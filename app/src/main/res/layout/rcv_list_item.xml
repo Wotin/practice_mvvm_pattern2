@@ -6,7 +6,7 @@
         
         <variable
             name="user"
-            type="com.wotin.practicemvvmpattern5.Model.ProfileData" />
+            type="com.wotin.practicemvvmpattern5.model.ProfileData" />
         
     </data>
 

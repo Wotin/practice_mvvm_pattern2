@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.wotin.practicemvvmpattern5.Model.ProfileData
+import com.wotin.practicemvvmpattern5.model.ProfileData
 import com.wotin.practicemvvmpattern5.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
