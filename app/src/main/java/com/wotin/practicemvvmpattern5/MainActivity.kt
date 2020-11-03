@@ -31,8 +31,9 @@ class MainActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@MainActivity)
         }
         profileAdapter.profileList = arrayListOf(
-            ProfileData(name = "Kim", age = 25),
-            ProfileData(name = "Nam", age = 23)
+            ProfileData(profile = R.drawable.brain, name = "Kim", age = 25),
+            ProfileData(profile = R.drawable.puffin, name = "Nam", age = 23),
+            ProfileData(profile = R.drawable.brain, name = "NNNNNNNNNNNN", age = 80)
         )
         profileAdapter.notifyDataSetChanged()
     }
