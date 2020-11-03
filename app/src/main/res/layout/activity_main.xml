@@ -5,10 +5,10 @@
     <data>
         <variable
             name="item"
-            type="com.wotin.practicemvvmpattern5.ObservableData" />
+            type="com.wotin.practicemvvmpattern5.observable.ObservableData" />
         <variable
             name="activity"
-            type="com.wotin.practicemvvmpattern5.MainActivity" />
+            type="com.wotin.practicemvvmpattern5.activity.MainActivity" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,10 +39,10 @@
 
 
         <Button
-            android:id="@+id/btnSample"
+            android:id="@+id/go_to_practice_viewmodel_livedata_databinding_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="Practice ViewModel And LiveData And DataBinding"
             android:onClick="@{activity::btnClick}"
             />
 

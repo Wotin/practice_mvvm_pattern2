@@ -1,30 +1,33 @@
-package com.wotin.practicemvvmpattern5
+package com.wotin.practicemvvmpattern5.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
-import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.wotin.practicemvvmpattern5.R
+import com.wotin.practicemvvmpattern5.adapter.ProfileAdapter
 import com.wotin.practicemvvmpattern5.model.ProfileData
 import com.wotin.practicemvvmpattern5.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
+import com.wotin.practicemvvmpattern5.observable.ObservableData
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
-    var textItem : ObservableData = ObservableData()
+    var textItem : ObservableData =
+        ObservableData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this,
+            R.layout.activity_main
+        )
         binding.activity = this@MainActivity
         setRcv()
         binding.item = textItem
@@ -34,11 +37,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btnClick(view: View) {
-        Toast.makeText(applicationContext, "Button Click", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this@MainActivity, PracticeViewModelLiveDataDataBinding::class.java)
+        startActivity(intent)
     }
 
     fun setRcv() {
-        val profileAdapter = ProfileAdapter(this)
+        val profileAdapter =
+            ProfileAdapter(this)
         binding.mainRcv.apply {
             adapter = profileAdapter
             layoutManager = LinearLayoutManager(this@MainActivity)
